@@ -1,0 +1,18 @@
+<div class="text-center" ng-show="isSessionActive()">
+	<div class="text-center" ng-hide="userAlreadyVoted()">
+		<h2>Restaurantes disponíveis</h2>
+		<br /> 
+		<a ng-href="#" ng-repeat="place in places" ng-click="vote(place.id)">{{place.name}}<br /></a>
+	</div>
+	<div class="text-center" ng-show="userAlreadyVoted()">
+		<h2>Voce já votou hoje. Tente novamente amanhã.</h2>
+		<br /> 
+		<a href="http://localhost:8080/RESToQuizApp">Voltar a pagina inicial</a>
+	</div>
+</div>
+<br />
+<div class="text-center" ng-hide="isSessionActive()">
+	<h2>Sessão expirou.</h2>
+	<br /> 
+	<a href="http://localhost:8080/RESToQuizApp">Voltar a pagina inicial</a>
+</div>

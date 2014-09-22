@@ -1,0 +1,13 @@
+<div class="text-center" ng-hide="isSessionActive()">
+<h2>Login</h2>
+<a ng-href="#" ng-repeat="user in users" ng-click="addUserIdToCookie(user.id)">{{user.name}}<br/></a>
+</div>
+<div class="text-center" ng-show="isSessionActive()">
+	<h2>Opções</h2>
+	<a ng-href="#vote">Escolher restaurante</a>
+	<br/>
+	<a ng-href="#result">Resultados de hoje</a>
+	<br/>
+	<br/>
+	<a ng-href="#" ng-click="logout()">Logout</a>
+</div>

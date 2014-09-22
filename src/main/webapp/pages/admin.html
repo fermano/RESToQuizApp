@@ -1,0 +1,12 @@
+<div class="text-center" ng-show="isSessionActive()">
+	<h1>Administração</h1>
+	<br /> 
+	<a ng-href="#" ng-click="finishDay()">Finalizar hoje</a>
+	<br/>
+	<a ng-href="#" ng-click="finishWeek()">Finalizar semana</a>
+</div>
+<div class="text-center" ng-hide="isSessionActive()">
+	<h2>Efetue login para acessar o admin.</h2>
+	<br /> 
+	<a ng-href="http://localhost:8080/RESToQuizApp">Voltar a pagina inicial</a>
+</div>
